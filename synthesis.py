@@ -33,6 +33,10 @@ class SimpleSynthesis(gym.Env):
         return self.state
 
     def step(self, action):
+        """
+        Make new synthesis using current molecule and chosen reagent.
+        :param action: chosed reagent to add
+        """
         self._step(action)
 
     def _step(self, action):
@@ -75,5 +79,4 @@ class SimpleSynthesis(gym.Env):
         :return: a tuple (new molecule, similarity score)
                 similarity score for a product and target
         """
-        self.target
         return None, 0.0
