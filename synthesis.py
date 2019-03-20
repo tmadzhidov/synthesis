@@ -10,7 +10,9 @@ class SimpleSynthesis(gym.Env):
     Observation:
         STUB
         The current synthesized molecule properties, like ...
-
+    State:
+        Set of molecules synthesized so far
+        
     Actions:
         Type: Discrete(n)
         Enumerated available reagents.
@@ -76,7 +78,7 @@ class SimpleSynthesis(gym.Env):
         """
         Adding a reagent to current molecule.
         :param reagent_num: reagent to add
-        :return: a tuple (new molecule, similarity score)
+        :return: set of new molecules, similarity score of closest molecule
                 similarity score for a product and target
         """
         return None, 0.0
